@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" > -->
+      <style>
+
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        
+
+        :root {
+          --amber: #ffbe0bff;
+          --orange: #fb5607ff;
+          --rose: #ff006eff;
+          --violet: #8338ecff;
+          --azure: #3a86ffff;
+        }
+
+        body {
+          background-color: var(--azure);
+          color: var(--amber)
+        }
+
+        #container{
+          height: 150vh;
+        }
+
+
+
+        
+
+          /* Navigation */
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: var(--violet);
+
+
+   }
+
+      li  {
+        float: left;
+      }
+
+     li a, .dropdown_button {
+      display: block;
+     color: var(--amber);
+      text-decoration: none;
+      padding: 14px 16px;
+      float: none;
+      text-align: center;
+
+     }
+
+     ul a:hover {
+      background-color: var(--rose);
+      color: var(--amber);
+     }
+
+     .hide {
+      display: none;
+     }
+
+     /* dropdown */
+
+     .dropdown {
+      position: relative;
+     }
+
+  
+
+     .dropdown-menu {
+      position: absolute;
+   
+     }
+
+     .dropdown_button {
+        display: none;
+     }
+
+     .active {
+           background-color: var(--rose);
+           color: var(--amber);
+           
+        }
+
+        
+
+
+       @media screen and (max-width: 480px) {
+          body {
+            background-color: var(--violet);
+            color: var(--blue);
+
+          }
+          li {
+            float: none;
+          }
+          ul {
+            background-color: var(--azure);
+          }
+          .active {
+            background-color: var(--azure);
+
+          }
+          #profile_pic {
+            width: 50px;
+            height: 50px;
+          }
+          .dropdown_button {
+            display: block;
+            width: 100%;
+            background-color: var(--rose);
+           color: var(--amber);
+           border: none;
+          
+          }
+          
+          
+          .dropdown_menu{
+            display: none;
+          }       
+         
+        }
+
+       @media screen and (max-width: 769px) {
+         
+        #profile_pic {
+            width: 100px;
+            height: 100px;
+        }
+
+
+       }
+
+
+        #profile_pic {
+
+          border-radius: 50%;
+       
+          margin: 20px auto;
+          display: block;
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+          object-position: -130px;
+
+
+        }
+
+        .myinfo {
+          background-color: var(--orange);
+          max-width: 550px;
+          height: 70px;
+          margin: 0 auto;
+          padding: 10px;
+          border-radius: 15px;
+          color: var(--amber);
+          text-align: center;
+         
+
+        }
+
+        nav {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          /* margin: 0;
+          padding: 0; */
+        }
+
+        .header {
+          margin-top: 60px;
+        }
+
+
+        .about {
+          padding: 20px;
+          border-radius: 5px ;
+          background-color: var(--violet);
+          max-width: 900px;
+          margin: 0 auto;
+          color: var(--amber)
+          
+        }
+
+        h3 {
+          background-color: var(--orange);
+          width: 40%;
+          padding: 5px;
+          text-align: center;
+          border-radius: 6px;
+          margin-bottom: 10px;
+        }
+
+        .hlight {
+          border: 2px solid var(--amber);
+          width: 30%;
+          border-radius: 8px;
+          text-align: center;
+          margin-bottom: 5px;
+          margin-top: 10px;
+          background-color: var(--azure);
+        }
+
+        .hlp {
+          background-color: var(--azure);
+          padding: 10px;
+          text-indent: 10px;
+          border-radius: 8px;
+        }
+
+        
+       
+
+      </style>
+</head>
+<body>
+
+  <div id="container">
+     <nav>
+    <div class="dropdown">
+    <button  class="dropdown_button"> >></button> 
+      <ul class="dropdown_menu">
+        <li><a class="active" href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Project</a></li>
+          
+          <li><a href="">Contact</a></li>
+        
+      </ul>
+      
+    </div>
+    </nav>
+
+    <div class="header">
+      <!-- <a href="Images/luffy.jpeg" target="_blank"> -->
+
+        <img id="profile_pic" src="Images/luffy.jpeg"  alt="profile pic">
+      <!-- </a> -->
+      <div class="myinfo">
+         <h1>My Profile Picture</h1>
+      
+      <p>I am Ariel not a programmer but a problem solver developer.</p>
+      </div>
+
+     
+    </div>
+    <div class="about">
+      <h3>About</h3>
+      <div class="cona">
+        <div class="hlight">Objective</div>
+        <p class="hlp"> Ako ay entry level pa lamang
+           at handa akong i apply ang aking natutunan 
+           sa paaralan at aking kasanayan na kaalaman 
+           ayon sa aking makakaya , para i apply sa aking area
+            ng trabaho na may kinalaman sa aking pag aaral.
+             Handa rin ako matutu pa ng mga bagong kaalaman sa
+              larangan ng tungkol sa teknolohiya na aking pinag 
+              aralan. </p>
+          <!-- Pinagaralan -->
+      <div class="cona">
+        <div class="hlight">Education</div>
+        <p class="hlp"> - Graduated at Partido State University Goa Campus 
+        <br>
+       last May 2024  
+        </p>
+        
+      </div>
+      <!-- skills -->
+      <div class="cona">
+        <div class="hlight">Skills</div>
+        <p class="hlp"> HTML, CSS, Javascript, Canva, 
+          <!-- Adobe Premiere, Figma ,Photoshop, Godot, PHP, PYthon, MYSQL, Linux ,React, Node.js , Tailwind, -->
+         and Microsoft Office
+   
+        </p>
+        
+      </div>
+    </div>
+     <div class="project">
+
+     </div>
+
+    <div class="footer">
+
+    </div>
+    
+    
+    
+  </div>
+
+    <script>
+    
+    // document.getElementsByClassName("dropdown").addEventListener("mouseup",hided);
+      
+    
+    // function hided() {
+    //   document.getElementsByClassName("dropdown_menu")[0].style.display = "none";
+    // }
+
+   // const dropdown = document.getElementsByClassName("dropdown")[0];
+
+   // const dropdownMenu = document.getElementsByClassName("dropdown_menu")[0];
+
+   // dropdown.addEventListener("mousedown",() => {dropdownMenu.style.display = "block"});
+
+   // dropdown.addEventListener("mouseup", () => {
+    //   dropdownMenu.style.display = "none";
+    // })
+
+
+   const dropdownButton = document.getElementsByClassName("dropdown_button")[0];
+const dropdownMenu = document.getElementsByClassName("dropdown_menu")[0];
+
+dropdownButton.addEventListener("click", () => {
+  if (dropdownMenu.style.display === "block") {
+    dropdownMenu.style.display = "none";
+  } else {
+    dropdownMenu.style.display = "block";
+  }
+});
+
+    </script>
+    
+</body>
+</html>
