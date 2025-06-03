@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,6 +82,7 @@
 
      .dropdown-menu {
       position: absolute;
+    
    
      }
 
@@ -93,13 +96,21 @@
            
         }
 
+
+      nav.scrolled {
+  background-color: rgba(131, 56, 236, 0.7); 
+  opacity: 0; 
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+     
+
         
 
 
        @media screen and (max-width: 480px) {
           body {
             background-color: var(--violet);
-            color: var(--blue);
+            color: var(--azure);
 
           }
           li {
@@ -117,19 +128,32 @@
             height: 50px;
           }
           .dropdown_button {
-            display: block;
+           display: block; 
             width: 100%;
             background-color: var(--rose);
            color: var(--amber);
            border: none;
           
           }
+  .cona {
+    background-color: var(--azure);
+    padding: 10px;
+    border-radius: 15px;
+
+
+   }
           
           
-          .dropdown_menu{
-            display: none;
-          }       
-         
+         .dropdown_menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s  ease-in-out;
+  }
+
+        .dropdown_menu.show {
+    opacity: 1;
+    visibility: visible;
+  }
         }
 
        @media screen and (max-width: 769px) {
@@ -138,6 +162,8 @@
             width: 100px;
             height: 100px;
         }
+
+  
 
 
        }
@@ -152,7 +178,8 @@
           width: 250px;
           height: 250px;
           object-fit: cover;
-          object-position: -130px;
+          /*object-position: 0 -25px;*/
+           object-position: -120px;
 
 
         }
@@ -160,12 +187,14 @@
         .myinfo {
           background-color: var(--orange);
           max-width: 550px;
-          height: 70px;
+          height: 100px;
           margin: 0 auto;
-          padding: 10px;
+          padding: 15px;
           border-radius: 15px;
           color: var(--amber);
           text-align: center;
+         /*  overflow-y: auto; */
+           
          
 
         }
@@ -218,9 +247,24 @@
           text-indent: 10px;
           border-radius: 8px;
         }
+   
+  /* footer*/
+   
 
-        
-       
+ 
+
+  footer {
+  
+    color: var(--amber);
+    padding: 15px;
+    text-align: center;
+    bottom: 0;
+    margin: 0 auto;
+   background-color: var(--orange);
+   border-radius: 5px;
+  }
+
+  
 
       </style>
 </head>
@@ -229,7 +273,7 @@
   <div id="container">
      <nav>
     <div class="dropdown">
-    <button  class="dropdown_button"> >></button> 
+    <button  class="dropdown_button"> = </button> 
       <ul class="dropdown_menu">
         <li><a class="active" href="">Home</a></li>
           <li><a href="">About</a></li>
@@ -243,9 +287,9 @@
     </nav>
 
     <div class="header">
-      <!-- <a href="Images/luffy.jpeg" target="_blank"> -->
+      <!-- <a href="Images/luffy.JPG" target="_blank"> -->
 
-        <img id="profile_pic" src="images/luffy.jpeg"  alt="profile pic">
+        <img id="profile_pic" src="Images/luffy.jpeg"  alt="profile pic">
       <!-- </a> -->
       <div class="myinfo">
          <h1>My Profile Picture</h1>
@@ -259,20 +303,11 @@
       <h3>About</h3>
       <div class="cona">
         <div class="hlight">Objective</div>
-        <p class="hlp"> Ako ay entry level pa lamang
-           at handa akong i apply ang aking natutunan 
-           sa paaralan at aking kasanayan na kaalaman 
-           ayon sa aking makakaya , para i apply sa aking area
-            ng trabaho na may kinalaman sa aking pag aaral.
-             Handa rin ako matutu pa ng mga bagong kaalaman sa
-              larangan ng tungkol sa teknolohiya na aking pinag 
-              aralan. </p>
+        <p class="hlp"> "As a recent graduate/entry-level professional, I am enthusiastic about applying my academic knowledge and skills in a real-world setting. I am committed to continuous learning and professional growth, particularly in the field of technology." </p>
           <!-- Pinagaralan -->
       <div class="cona">
         <div class="hlight">Education</div>
-        <p class="hlp"> - Graduated at Partido State University Goa Campus 
-        <br>
-       last May 2024  
+        <p class="hlp"> - "I graduated from Partido State University Goa Campus in May 2024."
         </p>
         
       </div>
@@ -288,10 +323,15 @@
       </div>
     </div>
      <div class="project">
+      <div class="hlight">My Projects</div>
 
      </div>
 
     <div class="footer">
+       <footer>
+  <p>&copy; 2025 Ariel Paga Jr.</p>
+ 
+</footer>
 
     </div>
     
@@ -301,34 +341,42 @@
 
     <script>
     
-    // document.getElementsByClassName("dropdown").addEventListener("mouseup",hided);
-      
-    
-    // function hided() {
-    //   document.getElementsByClassName("dropdown_menu")[0].style.display = "none";
-    // }
+   
 
-   // const dropdown = document.getElementsByClassName("dropdown")[0];
+  const nav = document.querySelector('nav');
+const dropdownButton = document.querySelector('.dropdown_button');
+const dropdownMenu = document.querySelector('.dropdown_menu');
 
-   // const dropdownMenu = document.getElementsByClassName("dropdown_menu")[0];
+dropdownButton.addEventListener('click', () => {
+  dropdownMenu.classList.toggle('show');
+});
 
-   // dropdown.addEventListener("mousedown",() => {dropdownMenu.style.display = "block"});
-
-   // dropdown.addEventListener("mouseup", () => {
-    //   dropdownMenu.style.display = "none";
-    // })
-
-
-   const dropdownButton = document.getElementsByClassName("dropdown_button")[0];
-const dropdownMenu = document.getElementsByClassName("dropdown_menu")[0];
-
-dropdownButton.addEventListener("click", () => {
-  if (dropdownMenu.style.display === "block") {
-    dropdownMenu.style.display = "none";
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
   } else {
-    dropdownMenu.style.display = "block";
+    nav.classList.remove('scrolled');
   }
 });
+
+nav.addEventListener('mouseover', () => {
+  nav.classList.remove('scrolled');
+});
+
+nav.addEventListener('mouseout', () => {
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  }
+});
+
+
+  nav.addEventListener('click', () => {
+  nav.classList.remove('scrolled');
+});
+
+
+
+
 
     </script>
     
