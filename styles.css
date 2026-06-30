@@ -1,0 +1,585 @@
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+
+  :root {
+    --amber: #ffbe0bff;
+    /* --orange: #fb5607ff; */
+    /* --rose: #ff006eff; */
+    --light_gray: #5a5757;
+    --violet: #8338ecff;
+    --white: #fff;
+    /* --azure: #3a86ffff; */
+    --azure: rgb(32, 107, 228);
+
+  }
+
+  body {
+    color: var(--amber);
+    font-family: consolas;
+    font-weight: 400;
+
+  }
+
+
+
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+  }
+
+  .container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+  }
+
+
+  /* Navigation */
+
+  .navbar {
+    background: var(--azure);
+    padding: 10px;
+  }
+
+  .navbar .main-menu ul {
+    display: flex;
+
+  }
+
+  .navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    transition: 0.5s;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.1rem;
+
+
+  }
+
+
+
+  .navbar ul li a:hover {
+    color: var(--amber);
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+  .navbar ul li:last-child a {
+    margin-left: 10px;
+
+  }
+
+
+
+  /* Header */
+  .header {
+    background-color: #ece2e2;
+
+
+
+  }
+
+  .header .container {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+  }
+
+  .header .intro-content {
+    width: 70%;
+    margin-left: 30%;
+
+  }
+
+  .header .intro-heading {
+    margin-top: 23px;
+  }
+
+  .header .intro-text {
+    width: 70%;
+    margin-bottom: 20px;
+    font-weight: 400;
+
+  }
+
+  .hlp {
+    padding: 10px;
+    text-indent: 10px;
+    border-radius: 8px;
+  }
+
+  .about_me,
+  .about_school,
+  .about_skill {
+    /* color: var(--amber); */
+    color: #fff;
+
+  }
+
+  .about {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--violet);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+
+  }
+
+
+  /* Project */
+  .project {
+    margin: 0;
+    background-color: #ece2e2;
+    padding: 20px;
+    height: 100%;
+
+  }
+
+  .project h3 {
+    margin-top: 30px;
+    padding: 20px 0;
+  }
+
+  .post_wraper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+  .post {
+    border: 1px solid var(--violet);
+    -webkit-box-shadow: -2pd 7px 21px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  }
+
+  .thumbnail {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+
+  }
+
+  .post-preview {
+    background-color: #756868;
+    padding: 15px;
+  }
+
+  .post-title {
+    /* color: black; */
+    margin: 0;
+  }
+
+  .post-intro {
+    /* color: #4b5156; */
+    font-size: 14px;
+  }
+
+
+
+  .post-preview a {
+    margin-top: 5px;
+    display: block;
+    color: var(--amber);
+  }
+
+  /* Contact */
+
+  .contact {
+    background-color: var(--violet);
+    padding: 30px
+  }
+
+  .contact h3 {
+    margin: 20px 0 20px;
+    padding: 10px;
+    text-align: center;
+
+  }
+
+
+
+  .contact .form {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--amber);
+    padding: 3cqw;
+    border-radius: 10px;
+    background-color: var(--azure);
+    margin-bottom: 50px;
+
+  }
+
+  .form label {
+    line-height: 2.7em;
+  }
+
+  .form textarea {
+    min-height: 100px;
+    font-size: 14px;
+    border-radius: 5px;
+
+  }
+
+
+  .input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--amber);
+    font-size: 14px;
+  }
+
+
+  #submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--amber);
+    background-color: #1f12d4;
+    border: none;
+    border-radius: 5px;
+  }
+
+
+
+
+
+  /* buttton */
+
+  .btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background-color: var(--light-color);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: poiter;
+    transition: 0.5;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  .btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+  }
+
+  .btn-dark {
+    background-color: var(--dark-color);
+    color: #fff;
+  }
+
+  .btn-block {
+    display: block;
+    width: 100%;
+
+  }
+
+
+
+
+  /* Hamburger button */
+
+  .hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+
+
+  .hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+
+  }
+
+  /* Mobile Menu */
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: var(--violet);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+  }
+
+  .mobile-menu.active {
+    right: 0;
+
+  }
+
+  .mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+
+  }
+
+  .mobile-menu ul li {
+    margin: 10px 0;
+  }
+
+  .mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+
+  }
+
+  /* my header */
+
+  #profile_pic {
+
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 -25px;
+
+
+  }
+
+  /* h3 {
+    width: 40%;
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  } */
+
+  .hlight {
+    border: 2px solid var(--amber);
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    background-color: var(--azure);
+  }
+
+
+
+  /* footer*/
+
+
+
+
+  .footer {
+
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    background-color: var(--light_gray);
+    border-radius: 5px;
+    width: 100%;
+
+  }
+
+  /* Text classes */
+
+  .text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 40px 0 20px;
+  }
+
+  .text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+
+  }
+
+  .text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+  }
+
+  .text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+  }
+
+  .text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+
+
+
+  @media screen and (max-width: 480px) {
+
+
+    #profile_pic {
+      width: 200px;
+      height: 200px;
+    }
+
+    .header .intro-content {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+    }
+
+    .header .text-xxl {
+
+      font-size: 1.6rem;
+    }
+
+    .project .text-lg,
+    .about .text-lg,
+    .contact .text-lg {
+      font-size: 1.4rem;
+
+    }
+
+    .header .text-md,
+    .about .text-md,
+    .project .post-preview {
+      font-size: 0.9rem;
+    }
+
+    .form textarea {
+      max-width: 100%;
+      min-height: 100px;
+      font-size: 14px;
+      border-radius: 5px;
+
+    }
+
+    .mobile-menu ul li a {
+      font-size: 18px;
+      font-weight: 400;
+
+
+    }
+
+  }
+
+  @media screen and (max-width: 769px) {
+
+
+    .navbar .main-menu {
+      display: none;
+    }
+
+    .navbar .hamburger-button {
+      display: block;
+    }
+
+    #profile_pic {
+      width: 200px;
+      height: 200px;
+    }
+
+    /*
+  ul {
+    margin-right: 0;
+
+  }
+
+  li a,
+  .dropdown_button {
+    padding: 0 15px;
+    margin: 0;
+  }
+
+  li:first-child a {
+    margin-right: 5px;
+  }
+
+  .header {
+    margin: 0 20px;
+
+  }
+
+  nav {
+    height: 50px;
+  }
+
+  .header .container {
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .logo {
+    margin-left: 5px;
+  } */
+
+  }
